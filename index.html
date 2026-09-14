@@ -1,0 +1,5250 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TRS IT | Your Digital Technology Partner</title>
+
+    <meta name="description"
+        content="TRS IT - Professional Website Development, App Development, Domain Hosting, Digital Marketing and Complete IT Solutions.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================================
+           ROOT & RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+
+            --primary-light: #60a5fa;
+            --secondary-light: #a78bfa;
+
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+
+            --text: #334155;
+            --light-text: #64748b;
+
+            --white: #ffffff;
+            --light: #f8fafc;
+
+            --border: #e2e8f0;
+
+            --gradient:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #7c3aed
+                );
+
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                'Hind Siliguri',
+                sans-serif;
+
+            background:
+                var(--white);
+
+            color:
+                var(--text);
+
+            overflow-x:
+                hidden;
+
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        .container {
+
+            width:
+                min(1180px, 92%);
+
+            margin:
+                auto;
+
+        }
+
+
+        .section {
+
+            padding:
+                100px 0;
+
+        }
+
+
+        .section-title {
+
+            text-align:
+                center;
+
+            margin-bottom:
+                60px;
+
+        }
+
+
+        .section-title span {
+
+            color:
+                var(--primary);
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                2px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-family:
+                'Poppins',
+                'Hind Siliguri',
+                sans-serif;
+
+            font-size:
+                clamp(30px, 4vw, 45px);
+
+            color:
+                var(--dark);
+
+            margin-top:
+                12px;
+
+        }
+
+
+        .section-title p {
+
+            max-width:
+                680px;
+
+            margin:
+                15px auto 0;
+
+            color:
+                var(--light-text);
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .gradient-text {
+
+            background:
+                var(--gradient);
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+
+        }
+
+
+        /* =========================================
+           BUTTON
+        ========================================= */
+
+        .btn {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                10px;
+
+            padding:
+                14px 26px;
+
+            border-radius:
+                50px;
+
+            font-size:
+                16px;
+
+            font-weight:
+                700;
+
+            transition:
+                0.3s ease;
+
+            cursor:
+                pointer;
+
+            border:
+                none;
+
+        }
+
+
+        .btn-primary {
+
+            color:
+                white;
+
+            background:
+                var(--gradient);
+
+            box-shadow:
+                0 12px 30px
+                rgba(37, 99, 235, 0.25);
+
+        }
+
+
+        .btn-primary:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(124, 58, 237, 0.35);
+
+        }
+
+
+        .btn-outline {
+
+            background:
+                white;
+
+            color:
+                var(--primary);
+
+            border:
+                2px solid
+                #dbeafe;
+
+        }
+
+
+        .btn-outline:hover {
+
+            transform:
+                translateY(-4px);
+
+            background:
+                #eff6ff;
+
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            width:
+                100%;
+
+            z-index:
+                1000;
+
+            transition:
+                0.35s;
+
+        }
+
+
+        header.scrolled {
+
+            background:
+                rgba(255,255,255,0.92);
+
+            backdrop-filter:
+                blur(18px);
+
+            box-shadow:
+                0 8px 30px
+                rgba(15,23,42,0.08);
+
+        }
+
+
+        nav {
+
+            height:
+                80px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+        }
+
+
+        .logo {
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                29px;
+
+            font-weight:
+                800;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .logo span {
+
+            background:
+                var(--gradient);
+
+            -webkit-background-clip:
+                text;
+
+            color:
+                transparent;
+
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                26px;
+
+        }
+
+
+        .nav-links a {
+
+            color:
+                var(--dark);
+
+            font-weight:
+                600;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--primary);
+
+        }
+
+
+        .nav-btn {
+
+            color:
+                white !important;
+
+            padding:
+                11px 22px;
+
+            border-radius:
+                30px;
+
+            background:
+                var(--gradient);
+
+        }
+
+
+        .menu-btn {
+
+            display:
+                none;
+
+            font-size:
+                25px;
+
+            cursor:
+                pointer;
+
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height:
+                100vh;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fbff,
+                    #f5f3ff
+                );
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .hero::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            background:
+                rgba(37,99,235,0.13);
+
+            border-radius:
+                50%;
+
+            top:
+                -220px;
+
+            left:
+                -150px;
+
+            filter:
+                blur(50px);
+
+            animation:
+                blobMove 8s infinite alternate;
+
+        }
+
+
+        .hero::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            background:
+                rgba(124,58,237,0.13);
+
+            border-radius:
+                50%;
+
+            bottom:
+                -250px;
+
+            right:
+                -150px;
+
+            filter:
+                blur(50px);
+
+            animation:
+                blobMove 10s infinite alternate;
+
+        }
+
+
+        @keyframes blobMove {
+
+            0% {
+                transform: translate(0,0);
+            }
+
+            100% {
+                transform: translate(80px,40px);
+            }
+
+        }
+
+
+        .hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                60px;
+
+            align-items:
+                center;
+
+            padding-top:
+                90px;
+
+        }
+
+
+        .hero-text h1 {
+
+            font-family:
+                'Poppins',
+                'Hind Siliguri',
+                sans-serif;
+
+            font-size:
+                clamp(38px, 5vw, 64px);
+
+            line-height:
+                1.2;
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                24px;
+
+        }
+
+
+        .hero-text p {
+
+            color:
+                var(--light-text);
+
+            font-size:
+                18px;
+
+            line-height:
+                1.9;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                15px;
+
+        }
+
+
+        /* HERO TECH */
+
+        .hero-visual {
+
+            position:
+                relative;
+
+            height:
+                500px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .main-device {
+
+            width:
+                370px;
+
+            height:
+                250px;
+
+            background:
+                white;
+
+            border-radius:
+                22px;
+
+            padding:
+                14px;
+
+            box-shadow:
+                0 30px 80px
+                rgba(37,99,235,0.18);
+
+            animation:
+                float 5s ease-in-out infinite;
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+        }
+
+
+        .device-screen {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            border-radius:
+                14px;
+
+            background:
+                var(--gradient);
+
+            padding:
+                25px;
+
+        }
+
+
+        .screen-line {
+
+            height:
+                12px;
+
+            background:
+                rgba(255,255,255,0.45);
+
+            border-radius:
+                30px;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .screen-box {
+
+            height:
+                75px;
+
+            background:
+                rgba(255,255,255,0.85);
+
+            border-radius:
+                12px;
+
+            margin-bottom:
+                12px;
+
+        }
+
+
+        .screen-row {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                12px;
+
+        }
+
+
+        .screen-card {
+
+            height:
+                65px;
+
+            border-radius:
+                12px;
+
+            background:
+                rgba(255,255,255,0.4);
+
+        }
+
+
+        .floating-card {
+
+            position:
+                absolute;
+
+            z-index:
+                3;
+
+            background:
+                white;
+
+            padding:
+                16px;
+
+            border-radius:
+                18px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(15,23,42,0.12);
+
+            animation:
+                float 5s ease-in-out infinite;
+
+        }
+
+
+        .floating-card i {
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                12px;
+
+            color:
+                white;
+
+            background:
+                var(--gradient);
+
+        }
+
+
+        .card-one {
+
+            top:
+                45px;
+
+            left:
+                0;
+
+        }
+
+
+        .card-two {
+
+            bottom:
+                50px;
+
+            right:
+                0;
+
+            animation-delay:
+                1s;
+
+        }
+
+
+        @keyframes float {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+        }
+
+
+        /* =========================================
+           STATS
+        ========================================= */
+
+        .trust {
+
+            background:
+                white;
+
+            padding:
+                35px 0;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+        }
+
+
+        .trust-content {
+
+            display:
+                flex;
+
+            justify-content:
+                space-around;
+
+            align-items:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                25px;
+
+        }
+
+
+        .trust-item {
+
+            text-align:
+                center;
+
+        }
+
+
+        .trust-item h3 {
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                32px;
+
+            color:
+                var(--primary);
+
+        }
+
+
+        .trust-item p {
+
+            color:
+                var(--light-text);
+
+        }
+
+
+        /* =========================================
+           SERVICES
+        ========================================= */
+
+        .services {
+
+            background:
+                var(--light);
+
+        }
+
+
+        .service-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                25px;
+
+        }
+
+
+        .service-card {
+
+            background:
+                white;
+
+            padding:
+                35px 28px;
+
+            border-radius:
+                22px;
+
+            border:
+                1px solid
+                #eef2ff;
+
+            transition:
+                0.35s;
+
+        }
+
+
+        .service-card:hover {
+
+            transform:
+                translateY(-10px);
+
+            box-shadow:
+                0 25px 60px
+                rgba(37,99,235,0.12);
+
+            border-color:
+                #c4b5fd;
+
+        }
+
+
+        .service-icon {
+
+            width:
+                65px;
+
+            height:
+                65px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                18px;
+
+            color:
+                white;
+
+            font-size:
+                25px;
+
+            background:
+                var(--gradient);
+
+            margin-bottom:
+                22px;
+
+        }
+
+
+        .service-card h3 {
+
+            color:
+                var(--dark);
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            margin-bottom:
+                12px;
+
+        }
+
+
+        .service-card p {
+
+            color:
+                var(--light-text);
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .service-card a {
+
+            display:
+                inline-block;
+
+            margin-top:
+                18px;
+
+            color:
+                var(--primary);
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =========================================
+           CODING EXPERT SECTION
+        ========================================= */
+
+        .coding-section {
+
+            background:
+                #0b1120;
+
+            color:
+                white;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .coding-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                70px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .coding-text span {
+
+            color:
+                #a78bfa;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                2px;
+
+        }
+
+
+        .coding-text h2 {
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                clamp(30px,4vw,48px);
+
+            margin:
+                15px 0 20px;
+
+        }
+
+
+        .coding-text p {
+
+            color:
+                #cbd5e1;
+
+            line-height:
+                1.9;
+
+            margin-bottom:
+                25px;
+
+        }
+
+
+        .tech-tags {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px;
+
+        }
+
+
+        .tech-tags span {
+
+            background:
+                rgba(255,255,255,0.08);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            padding:
+                10px 18px;
+
+            border-radius:
+                30px;
+
+            color:
+                white;
+
+            animation:
+                tagFloat 3s ease-in-out infinite;
+
+        }
+
+
+        .tech-tags span:nth-child(2) {
+            animation-delay: .3s;
+        }
+
+        .tech-tags span:nth-child(3) {
+            animation-delay: .6s;
+        }
+
+        .tech-tags span:nth-child(4) {
+            animation-delay: .9s;
+        }
+
+        .tech-tags span:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+
+
+        @keyframes tagFloat {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+        }
+
+
+        /* CODE WINDOW */
+
+        .code-window {
+
+            background:
+                #111827;
+
+            border-radius:
+                22px;
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,0.4);
+
+            animation:
+                float 6s ease-in-out infinite;
+
+        }
+
+
+        .code-header {
+
+            height:
+                50px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            padding:
+                0 20px;
+
+            background:
+                #1f2937;
+
+        }
+
+
+        .dot {
+
+            width:
+                12px;
+
+            height:
+                12px;
+
+            border-radius:
+                50%;
+
+            background:
+                #64748b;
+
+        }
+
+
+        .code-body {
+
+            padding:
+                25px;
+
+            font-family:
+                monospace;
+
+            line-height:
+                2;
+
+            color:
+                #e2e8f0;
+
+            min-height:
+                330px;
+
+        }
+
+
+        .code-purple {
+            color: #c084fc;
+        }
+
+        .code-blue {
+            color: #60a5fa;
+        }
+
+        .code-green {
+            color: #4ade80;
+        }
+
+        .code-yellow {
+            color: #facc15;
+        }
+
+
+        .typing-code {
+
+            overflow:
+                hidden;
+
+            white-space:
+                nowrap;
+
+            width:
+                0;
+
+            animation:
+                typing 5s steps(45,end) infinite;
+
+        }
+
+
+        @keyframes typing {
+
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 100%;
+            }
+
+            100% {
+                width: 0;
+            }
+
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                70px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .about-image {
+
+            height:
+                420px;
+
+            border-radius:
+                30px;
+
+            background:
+                var(--gradient);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .about-image i {
+
+            font-size:
+                150px;
+
+            color:
+                rgba(255,255,255,0.9);
+
+        }
+
+
+        .about-box {
+
+            position:
+                absolute;
+
+            bottom:
+                30px;
+
+            left:
+                30px;
+
+            right:
+                30px;
+
+            padding:
+                20px;
+
+            border-radius:
+                18px;
+
+            background:
+                rgba(255,255,255,0.2);
+
+            backdrop-filter:
+                blur(10px);
+
+            color:
+                white;
+
+        }
+
+
+        .about-text h2 {
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                38px;
+
+            color:
+                var(--dark);
+
+            margin:
+                15px 0 20px;
+
+        }
+
+
+        .about-text p {
+
+            color:
+                var(--light-text);
+
+            line-height:
+                1.9;
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .check-list li {
+
+            margin:
+                12px 0;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .check-list i {
+
+            color:
+                var(--primary);
+
+            margin-right:
+                10px;
+
+        }
+
+
+        /* =========================================
+           WHY US
+        ========================================= */
+
+        .why {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #f5f3ff
+                );
+
+        }
+
+
+        .why-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                25px;
+
+        }
+
+
+        .why-card {
+
+            background:
+                rgba(255,255,255,0.85);
+
+            text-align:
+                center;
+
+            padding:
+                35px 25px;
+
+            border-radius:
+                22px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .why-card:hover {
+
+            transform:
+                translateY(-8px);
+
+        }
+
+
+        .why-card i {
+
+            font-size:
+                35px;
+
+            color:
+                var(--primary);
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .why-card h3 {
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        .why-card p {
+
+            color:
+                var(--light-text);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =========================================
+           TEAM SECTION
+        ========================================= */
+
+        .team {
+
+            background:
+                var(--light);
+
+        }
+
+
+        .chairman-card {
+
+            max-width:
+                900px;
+
+            margin:
+                0 auto 70px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                320px 1fr;
+
+            background:
+                white;
+
+            border-radius:
+                30px;
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                0 25px 60px
+                rgba(37,99,235,0.12);
+
+        }
+
+
+        .chairman-image {
+
+            min-height:
+                380px;
+
+            background:
+                var(--gradient);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .chairman-image img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+        }
+
+
+        .chairman-placeholder {
+
+            font-size:
+                130px;
+
+            color:
+                rgba(255,255,255,0.9);
+
+        }
+
+
+        .chairman-info {
+
+            padding:
+                55px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .chairman-badge {
+
+            display:
+                inline-block;
+
+            width:
+                fit-content;
+
+            background:
+                #eef2ff;
+
+            color:
+                var(--primary);
+
+            padding:
+                8px 16px;
+
+            border-radius:
+                30px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .chairman-info h3 {
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                36px;
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        .chairman-info h4 {
+
+            color:
+                var(--secondary);
+
+            font-size:
+                19px;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .chairman-info p {
+
+            color:
+                var(--light-text);
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* TEAM GRID */
+
+        .team-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap:
+                25px;
+
+        }
+
+
+        .team-card {
+
+            background:
+                white;
+
+            border-radius:
+                22px;
+
+            overflow:
+                hidden;
+
+            text-align:
+                center;
+
+            transition:
+                0.35s;
+
+            box-shadow:
+                0 10px 30px
+                rgba(15,23,42,0.06);
+
+        }
+
+
+        .team-card:hover {
+
+            transform:
+                translateY(-12px);
+
+            box-shadow:
+                0 25px 60px
+                rgba(37,99,235,0.16);
+
+        }
+
+
+        .team-image {
+
+            height:
+                270px;
+
+            background:
+                var(--gradient);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            overflow:
+                hidden;
+
+            position:
+                relative;
+
+        }
+
+
+        .team-image img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+        }
+
+
+        .team-placeholder {
+
+            font-size:
+                85px;
+
+            color:
+                rgba(255,255,255,0.9);
+
+        }
+
+
+        .team-info {
+
+            padding:
+                22px 15px;
+
+        }
+
+
+        .team-info h3 {
+
+            color:
+                var(--dark);
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                18px;
+
+            margin-bottom:
+                7px;
+
+        }
+
+
+        .team-info p {
+
+            color:
+                var(--secondary);
+
+            font-weight:
+                600;
+
+        }
+
+
+        /* =========================================
+           PORTFOLIO
+        ========================================= */
+
+        .portfolio-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                25px;
+
+        }
+
+
+        .portfolio-card {
+
+            background:
+                white;
+
+            border-radius:
+                22px;
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                0 10px 30px
+                rgba(15,23,42,0.06);
+
+            transition:
+                0.35s;
+
+        }
+
+
+        .portfolio-card:hover {
+
+            transform:
+                translateY(-10px);
+
+        }
+
+
+        .portfolio-image {
+
+            height:
+                230px;
+
+            background:
+                var(--gradient);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                70px;
+
+            color:
+                white;
+
+        }
+
+
+        .portfolio-content {
+
+            padding:
+                25px;
+
+        }
+
+
+        .portfolio-content h3 {
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .portfolio-content p {
+
+            color:
+                var(--light-text);
+
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta {
+
+            width:
+                min(1180px,92%);
+
+            margin:
+                50px auto;
+
+            padding:
+                80px 30px;
+
+            text-align:
+                center;
+
+            border-radius:
+                35px;
+
+            background:
+                var(--gradient);
+
+            color:
+                white;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .cta h2 {
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                clamp(30px,4vw,46px);
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .cta p {
+
+            font-size:
+                18px;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        .cta .btn {
+
+            background:
+                white;
+
+            color:
+                var(--primary);
+
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact {
+
+            background:
+                var(--light);
+
+        }
+
+
+        .contact-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                60px;
+
+        }
+
+
+        .contact-info h3 {
+
+            font-size:
+                32px;
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .contact-info > p {
+
+            color:
+                var(--light-text);
+
+            line-height:
+                1.9;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        .contact-item {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                22px;
+
+        }
+
+
+        .contact-item i {
+
+            width:
+                55px;
+
+            height:
+                55px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                16px;
+
+            color:
+                white;
+
+            background:
+                var(--gradient);
+
+            font-size:
+                20px;
+
+        }
+
+
+        .contact-item strong {
+
+            display:
+                block;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .contact-item a,
+        .contact-item p {
+
+            color:
+                var(--light-text);
+
+        }
+
+
+        .contact-form {
+
+            background:
+                white;
+
+            padding:
+                35px;
+
+            border-radius:
+                25px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(15,23,42,0.06);
+
+        }
+
+
+        .form-group {
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            width:
+                100%;
+
+            padding:
+                15px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                12px;
+
+            font-family:
+                inherit;
+
+            outline:
+                none;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+
+            border-color:
+                var(--primary);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(37,99,235,0.08);
+
+        }
+
+
+        .form-group textarea {
+
+            height:
+                120px;
+
+            resize:
+                none;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            background:
+                var(--dark);
+
+            color:
+                white;
+
+            padding:
+                70px 0 20px;
+
+        }
+
+
+        .footer-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap:
+                40px;
+
+            margin-bottom:
+                50px;
+
+        }
+
+
+        .footer-logo {
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                30px;
+
+            font-weight:
+                800;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .footer-logo span {
+
+            color:
+                #a78bfa;
+
+        }
+
+
+        .footer-about p {
+
+            color:
+                #cbd5e1;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .footer-links h4 {
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .footer-links a {
+
+            display:
+                block;
+
+            color:
+                #cbd5e1;
+
+            margin-bottom:
+                10px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .footer-links a:hover {
+
+            color:
+                white;
+
+            padding-left:
+                5px;
+
+        }
+
+
+        .social-links {
+
+            display:
+                flex;
+
+            gap:
+                10px;
+
+            margin-top:
+                20px;
+
+        }
+
+
+        .social-links a {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--dark-light);
+
+            color:
+                white;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .social-links a:hover {
+
+            background:
+                var(--gradient);
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        .copyright {
+
+            text-align:
+                center;
+
+            border-top:
+                1px solid
+                #334155;
+
+            padding-top:
+                20px;
+
+            color:
+                #94a3b8;
+
+        }
+
+
+/* =========================================
+   FLOATING BUTTONS - FIXED MOBILE RESPONSIVE
+========================================= */
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.whatsapp {
+
+    position: fixed;
+
+    bottom: calc(25px + env(safe-area-inset-bottom));
+
+    right: 20px;
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    color: white;
+
+    font-size: 30px;
+
+    z-index: 9999;
+
+    animation: pulse 2s infinite;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.whatsapp:hover {
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+@keyframes pulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(37,211,102,0.5);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 15px
+            rgba(37,211,102,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(37,211,102,0);
+
+    }
+
+}
+
+
+/* =========================================
+   SCROLL TOP BUTTON
+========================================= */
+
+.scroll-top {
+
+    position: fixed;
+
+    bottom: calc(100px + env(safe-area-inset-bottom));
+
+    right: 27px;
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background:
+        var(--gradient);
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        all 0.35s ease;
+
+    z-index: 9998;
+
+    box-shadow:
+        0 10px 30px
+        rgba(37,99,235,0.25);
+
+}
+
+
+.scroll-top.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.scroll-top:hover {
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+/* =========================================
+   MOBILE FLOATING BUTTON FIX
+========================================= */
+
+@media (max-width: 600px) {
+
+    .whatsapp {
+
+        width: 58px;
+
+        height: 58px;
+
+        right: 18px;
+
+        bottom: calc(20px + env(safe-area-inset-bottom));
+
+        font-size: 28px;
+
+    }
+
+
+    .scroll-top {
+
+        width: 48px;
+
+        height: 48px;
+
+        right: 23px;
+
+        bottom: calc(92px + env(safe-area-inset-bottom));
+
+    }
+
+}
+
+
+        /* =========================================
+           SCROLL ANIMATION
+        ========================================= */
+
+        .reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(70px);
+
+            transition:
+                all 0.9s ease;
+
+        }
+
+
+        .reveal.active {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        .reveal-left {
+
+            opacity:
+                0;
+
+            transform:
+                translateX(-90px);
+
+            transition:
+                all 0.9s ease;
+
+        }
+
+
+        .reveal-left.active {
+
+            opacity:
+                1;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        .reveal-right {
+
+            opacity:
+                0;
+
+            transform:
+                translateX(90px);
+
+            transition:
+                all 0.9s ease;
+
+        }
+
+
+        .reveal-right.active {
+
+            opacity:
+                1;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        .reveal-zoom {
+
+            opacity:
+                0;
+
+            transform:
+                scale(0.85);
+
+            transition:
+                all 0.8s ease;
+
+        }
+
+
+        .reveal-zoom.active {
+
+            opacity:
+                1;
+
+            transform:
+                scale(1);
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width: 950px) {
+
+            .hero-content,
+            .coding-grid,
+            .about-grid,
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .hero-content {
+
+                text-align:
+                    center;
+
+                padding-top:
+                    130px;
+
+                padding-bottom:
+                    60px;
+
+            }
+
+
+            .hero-buttons {
+
+                justify-content:
+                    center;
+
+            }
+
+
+            .service-grid,
+            .why-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+
+            .team-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+
+            .portfolio-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+
+            .chairman-card {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .chairman-image {
+
+                min-height:
+                    350px;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+
+            .menu-btn {
+
+                display:
+                    block;
+
+            }
+
+
+            .nav-links {
+
+                position:
+                    absolute;
+
+                top:
+                    80px;
+
+                left:
+                    0;
+
+                width:
+                    100%;
+
+                display:
+                    none;
+
+                flex-direction:
+                    column;
+
+                background:
+                    white;
+
+                padding:
+                    30px;
+
+                box-shadow:
+                    0 20px 40px
+                    rgba(0,0,0,0.08);
+
+            }
+
+
+            .nav-links.active {
+
+                display:
+                    flex;
+
+            }
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            .section {
+
+                padding:
+                    70px 0;
+
+            }
+
+
+            .service-grid,
+            .why-grid,
+            .team-grid,
+            .portfolio-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .trust-content {
+
+                display:
+                    grid;
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .hero-visual {
+
+                height:
+                    400px;
+
+            }
+
+
+            .main-device {
+
+                width:
+                    290px;
+
+                height:
+                    195px;
+
+            }
+
+
+            .floating-card {
+
+                font-size:
+                    12px;
+
+                padding:
+                    12px;
+
+            }
+
+
+            .card-one {
+
+                left:
+                    -10px;
+
+            }
+
+
+            .card-two {
+
+                right:
+                    -10px;
+
+            }
+
+
+            .chairman-info {
+
+                padding:
+                    35px 25px;
+
+            }
+
+
+            .chairman-info h3 {
+
+                font-size:
+                    28px;
+
+            }
+
+
+            .team-image {
+
+                height:
+                    300px;
+
+            }
+
+
+            .code-body {
+
+                font-size:
+                    12px;
+
+                overflow-x:
+                    auto;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header id="header">
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+
+                TRS <span>IT</span>
+
+            </a>
+
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="#home">হোম</a>
+
+                <a href="#services">সার্ভিস</a>
+
+                <a href="#about">আমাদের সম্পর্কে</a>
+
+                <a href="#team">টিম</a>
+
+                <a href="#portfolio">পোর্টফোলিও</a>
+
+                <a href="#contact">যোগাযোগ</a>
+
+                <a href="#contact" class="nav-btn">
+
+                    Get Started
+
+                </a>
+
+            </div>
+
+
+            <div class="menu-btn" id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+
+            <div class="hero-text">
+
+                <h1>
+
+                    আপনার ব্যবসাকে নিয়ে যান
+
+                    <span class="gradient-text">
+
+                        ডিজিটাল সফলতার
+
+                    </span>
+
+                    নতুন উচ্চতায়
+
+                </h1>
+
+
+                <p>
+
+                    TRS IT প্রদান করে Professional
+                    Website Development,
+                    App Development,
+                    Domain & Hosting,
+                    Digital Marketing এবং
+                    Complete IT Solution।
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#services"
+                       class="btn btn-primary">
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                        আমাদের সার্ভিস
+
+                    </a>
+
+
+                    <a href="#contact"
+                       class="btn btn-outline">
+
+                        <i class="fa-solid fa-message"></i>
+
+                        যোগাযোগ করুন
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-visual">
+
+
+                <div class="floating-card card-one">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <div>
+
+                        <strong>
+                            Website Development
+                        </strong>
+
+                        <br>
+
+                        Coding Experts
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="main-device">
+
+                    <div class="device-screen">
+
+                        <div class="screen-line"></div>
+
+                        <div class="screen-box"></div>
+
+                        <div class="screen-row">
+
+                            <div class="screen-card"></div>
+
+                            <div class="screen-card"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="floating-card card-two">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <div>
+
+                        <strong>
+                            Digital Growth
+                        </strong>
+
+                        <br>
+
+                        Grow Your Business
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- STATS -->
+
+<section class="trust">
+
+    <div class="container">
+
+        <div class="trust-content">
+
+
+            <div class="trust-item reveal">
+
+                <h3
+                    class="counter"
+                    data-target="100">
+
+                    0
+
+                </h3>
+
+                <p>
+                    Projects Completed
+                </p>
+
+            </div>
+
+
+            <div class="trust-item reveal">
+
+                <h3
+                    class="counter"
+                    data-target="50">
+
+                    0
+
+                </h3>
+
+                <p>
+                    Happy Clients
+                </p>
+
+            </div>
+
+
+            <div class="trust-item reveal">
+
+                <h3
+                    class="counter"
+                    data-target="20">
+
+                    0
+
+                </h3>
+
+                <p>
+                    Digital Services
+                </p>
+
+            </div>
+
+
+            <div class="trust-item reveal">
+
+                <h3>
+                    24/7
+                </h3>
+
+                <p>
+                    Support
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section
+    class="services section"
+    id="services">
+
+    <div class="container">
+
+
+        <div class="section-title reveal">
+
+            <span>
+                OUR SERVICES
+            </span>
+
+            <h2>
+                আপনার জন্য আমাদের সেরা সার্ভিস
+            </h2>
+
+            <p>
+
+                আপনার Business-কে Digital করার জন্য
+                প্রয়োজনীয় Professional IT Solution
+                এক জায়গায়।
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <h3>
+                    Website Development
+                </h3>
+
+                <p>
+
+                    Business Website,
+                    E-commerce,
+                    Portfolio এবং
+                    Custom Website Development।
+
+                </p>
+
+                <a href="#contact">
+
+                    বিস্তারিত জানুন
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-mobile-screen"></i>
+
+                </div>
+
+                <h3>
+                    App Development
+                </h3>
+
+                <p>
+
+                    Modern এবং
+                    User Friendly Mobile
+                    Application Development।
+
+                </p>
+
+                <a href="#contact">
+
+                    বিস্তারিত জানুন
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                </div>
+
+                <h3>
+                    Domain & Hosting
+                </h3>
+
+                <p>
+
+                    Fast, Secure এবং
+                    Reliable Domain
+                    Hosting Solution।
+
+                </p>
+
+                <a href="#contact">
+
+                    বিস্তারিত জানুন
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+                <h3>
+                    Ads Management
+                </h3>
+
+                <p>
+
+                    Facebook Ads এবং
+                    Digital Advertising
+                    Management Service।
+
+                </p>
+
+                <a href="#contact">
+
+                    বিস্তারিত জানুন
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>
+                    Digital Marketing
+                </h3>
+
+                <p>
+
+                    আপনার Business-এর
+                    Digital Growth এবং
+                    Online Marketing।
+
+                </p>
+
+                <a href="#contact">
+
+                    বিস্তারিত জানুন
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-share-nodes"></i>
+
+                </div>
+
+                <h3>
+                    Social Media Service
+                </h3>
+
+                <p>
+
+                    Social Media Boosting,
+                    Management এবং
+                    Business Growth Service।
+
+                </p>
+
+                <a href="#contact">
+
+                    বিস্তারিত জানুন
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CODING EXPERT -->
+
+<section class="coding-section section">
+
+    <div class="container">
+
+        <div class="coding-grid">
+
+
+            <div class="coding-text reveal-left">
+
+                <span>
+                    CODING EXPERTS
+                </span>
+
+                <h2>
+
+                    কোডিংয়ে দক্ষ,
+                    প্রযুক্তিতে শক্তিশালী
+
+                </h2>
+
+                <p>
+
+                    TRS IT-এর দক্ষ টিম আধুনিক
+                    Web এবং Application Technology
+                    ব্যবহার করে Fast, Secure এবং
+                    Professional Digital Solution
+                    তৈরি করে।
+
+                </p>
+
+
+                <div class="tech-tags">
+
+                    <span>HTML5</span>
+
+                    <span>CSS3</span>
+
+                    <span>JavaScript</span>
+
+                    <span>PHP</span>
+
+                    <span>React</span>
+
+                    <span>Responsive Design</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="code-window reveal-right">
+
+                <div class="code-header">
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                    <span class="dot"></span>
+
+                </div>
+
+
+                <div class="code-body">
+
+                    <div class="typing-code">
+
+                        <span class="code-purple">
+                            const
+                        </span>
+
+                        <span class="code-blue">
+                            TRS_IT
+                        </span>
+
+                        = {
+
+                    </div>
+
+
+                    <br>
+
+
+                    <span class="code-yellow">
+                        skills:
+                    </span>
+
+                    [
+
+                    <span class="code-green">
+
+                        "HTML"
+
+                    </span>
+
+                    ,
+
+                    <span class="code-green">
+
+                        "CSS"
+
+                    </span>
+
+                    ,
+
+                    <span class="code-green">
+
+                        "JavaScript"
+
+                    </span>
+
+                    ],
+
+                    <br>
+
+
+                    <span class="code-yellow">
+                        quality:
+                    </span>
+
+                    "
+
+                    <span class="code-green">
+
+                        Premium
+
+                    </span>
+
+                    ",
+
+                    <br>
+
+
+                    <span class="code-yellow">
+                        mission:
+                    </span>
+
+                    "
+
+                    <span class="code-green">
+
+                        Digital Success
+
+                    </span>
+
+                    "
+
+                    <br>
+
+                    };
+
+                    <br><br>
+
+
+                    <span class="code-purple">
+
+                        function
+
+                    </span>
+
+                    <span class="code-blue">
+
+                        buildSuccess
+
+                    </span>
+
+                    () {
+
+                    <br>
+
+                    &nbsp;&nbsp;
+
+                    <span class="code-purple">
+
+                        return
+
+                    </span>
+
+                    "
+
+                    <span class="code-green">
+
+                        Amazing Digital Solution 🚀
+
+                    </span>
+
+                    ";
+
+                    <br>
+
+                    }
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section
+    class="section"
+    id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <div class="about-image reveal-left">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <div class="about-box">
+
+                    <h3>
+                        TRS IT
+                    </h3>
+
+                    <p>
+                        Your Digital Technology Partner
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="about-text reveal-right">
+
+                <span
+                    style="
+                    color:#2563eb;
+                    font-weight:700;">
+
+                    ABOUT TRS IT
+
+                </span>
+
+                <h2>
+
+                    আপনার ডিজিটাল সফলতার
+                    বিশ্বস্ত সঙ্গী
+
+                </h2>
+
+
+                <p>
+
+                    TRS IT একটি আধুনিক
+                    Digital Technology
+                    Service Provider।
+
+                </p>
+
+
+                <p>
+
+                    আমরা ব্যক্তি, ব্যবসা এবং
+                    প্রতিষ্ঠানের জন্য Professional
+                    Website, App এবং বিভিন্ন
+                    Digital Solution প্রদান করি।
+
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Professional Quality Service
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Modern Technology
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Skilled Team
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Fast Support
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY US -->
+
+<section class="why section">
+
+    <div class="container">
+
+
+        <div class="section-title reveal">
+
+            <span>
+                WHY CHOOSE US
+            </span>
+
+            <h2>
+                কেন TRS IT বেছে নিবেন?
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card reveal-zoom">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h3>
+                    Modern Technology
+                </h3>
+
+                <p>
+                    আধুনিক Technology দিয়ে
+                    উন্নত Solution।
+                </p>
+
+            </div>
+
+
+            <div class="why-card reveal-zoom">
+
+                <i class="fa-solid fa-palette"></i>
+
+                <h3>
+                    Premium Design
+                </h3>
+
+                <p>
+                    Modern এবং Professional
+                    Premium Design।
+                </p>
+
+            </div>
+
+
+            <div class="why-card reveal-zoom">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>
+                    Reliable Service
+                </h3>
+
+                <p>
+                    বিশ্বাসযোগ্য এবং
+                    Quality Service।
+                </p>
+
+            </div>
+
+
+            <div class="why-card reveal-zoom">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <h3>
+                    Fast Support
+                </h3>
+
+                <p>
+                    দ্রুত এবং Friendly
+                    Customer Support।
+                </p>
+
+            </div>
+
+
+            <div class="why-card reveal-zoom">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h3>
+                    Affordable Price
+                </h3>
+
+                <p>
+                    সাশ্রয়ী মূল্যে
+                    Professional Solution।
+                </p>
+
+            </div>
+
+
+            <div class="why-card reveal-zoom">
+
+                <i class="fa-solid fa-rocket"></i>
+
+                <h3>
+                    Business Growth
+                </h3>
+
+                <p>
+                    আপনার Business Growth
+                    আমাদের প্রধান লক্ষ্য।
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     TEAM SECTION
+========================================= -->
+
+<section
+    class="team section"
+    id="team">
+
+    <div class="container">
+
+
+        <!-- SECTION TITLE -->
+
+        <div class="section-title reveal">
+
+            <span>
+                OUR TEAM
+            </span>
+
+            <h2>
+                আমাদের দক্ষ টিম
+            </h2>
+
+            <p>
+
+                দক্ষ, অভিজ্ঞ এবং প্রযুক্তিতে
+                পারদর্শী একটি টিম কাজ করছে
+                TRS IT-এর সফলতার পিছনে।
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================
+             CHAIRMAN
+             
+             শুধু নিচের ৩টি তথ্য পরিবর্তন করুন:
+             
+             1. Image Link
+             2. Name
+             3. Position
+        ====================================== -->
+
+        <div class="chairman-card reveal">
+
+
+            <!-- CHAIRMAN IMAGE -->
+
+            <div class="chairman-image">
+
+                <img
+                    src="https://i.ibb.co.com/wZ9ZLhCT/IMG-20260915-000735.jpg"
+                    alt="Chairman Name">
+
+            </div>
+
+
+
+            <!-- CHAIRMAN INFORMATION -->
+
+            <div class="chairman-info">
+
+
+                <div class="chairman-badge">
+
+                    <i class="fa-solid fa-crown"></i>
+
+                    CHAIRMAN
+
+                </div>
+
+
+                <!-- CHAIRMAN NAME -->
+
+                <h3>
+
+                    Tahsin Rahman Saad
+
+                </h3>
+
+
+                <!-- CHAIRMAN POSITION -->
+
+                <h4>
+
+                    Chairman & Founder
+                    of TRS IT
+
+                </h4>
+
+
+                <p>
+
+                    দক্ষ নেতৃত্ব এবং আধুনিক
+                    প্রযুক্তির মাধ্যমে TRS IT-কে
+                    একটি বিশ্বস্ত Digital Technology
+                    Company হিসেবে গড়ে তোলার
+                    লক্ষ্য নিয়ে কাজ করছেন।
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================================
+             TEAM MEMBERS
+             
+             প্রতিটি Member-এর জন্য শুধু:
+             
+             src = Image Link
+             h3  = Name
+             p   = Position
+        ====================================== -->
+
+        <div class="team-grid">
+
+
+            <!-- =============================
+                 TEAM MEMBER 1
+            ============================== -->
+
+            <div class="team-card reveal">
+
+
+                <div class="team-image">
+
+                    <!-- IMAGE LINK -->
+
+                    <img
+                        src="https://i.ibb.co.com/LzqgF7JZ/1789410508647.jpg"
+                        alt="Team Member Name">
+
+                </div>
+
+
+                <div class="team-info">
+
+
+                    <!-- NAME -->
+
+                    <h3>
+
+                        Tamim Chowdhury
+
+                    </h3>
+
+
+                    <!-- POSITION -->
+
+                    <p>
+
+                        Web Developer
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================
+                 TEAM MEMBER 2
+            ============================== -->
+
+            <div class="team-card reveal">
+
+
+                <div class="team-image">
+
+                    <!-- IMAGE LINK -->
+
+                    <img
+                        src="https://i.ibb.co.com/8g6BMDHn/1789410137171.jpg"
+                        alt="Team Member Name">
+
+                </div>
+
+
+                <div class="team-info">
+
+
+                    <!-- NAME -->
+
+                    <h3>
+
+                        Sheikh Bayzid
+
+                    </h3>
+
+
+                    <!-- POSITION -->
+
+                    <p>
+
+                        App Developer
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================
+                 TEAM MEMBER 3
+            ============================== -->
+
+            <div class="team-card reveal">
+
+
+                <div class="team-image">
+
+                    <!-- IMAGE LINK -->
+
+                    <img
+                        src="https://i.ibb.co.com/N8Z6GVM/IMG-20260915-003726.jpg"
+                        alt="Team Member Name">
+
+                </div>
+
+
+                <div class="team-info">
+
+
+                    <!-- NAME -->
+
+                    <h3>
+
+                        Sanzida Nusrat Akhi
+
+                    </h3>
+
+
+                    <!-- POSITION -->
+
+                    <p>
+
+                        Digital Marketer
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================
+                 TEAM MEMBER 4
+            ============================== -->
+
+            <div class="team-card reveal">
+
+
+                <div class="team-image">
+
+                    <!-- IMAGE LINK -->
+
+                    <img
+                        src="https://i.ibb.co.com/G4m7xCX8/IMG-20260915-003803.jpg"
+                        alt="Team Member Name">
+
+                </div>
+
+
+                <div class="team-info">
+
+
+                    <!-- NAME -->
+
+                    <h3>
+
+                        Sumaiya Akter
+
+                    </h3>
+
+
+                    <!-- POSITION -->
+
+                    <p>
+
+                        Graphic Designer
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- PORTFOLIO -->
+
+<section
+    class="section"
+    id="portfolio">
+
+    <div class="container">
+
+
+        <div class="section-title reveal">
+
+            <span>
+                OUR PORTFOLIO
+            </span>
+
+            <h2>
+                আমাদের কিছু কাজ
+            </h2>
+
+        </div>
+
+
+        <div class="portfolio-grid">
+
+
+            <div class="portfolio-card reveal">
+
+                <div class="portfolio-image">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                </div>
+
+                <div class="portfolio-content">
+
+                    <h3>
+                        Business Website
+                    </h3>
+
+                    <p>
+                        Professional Corporate Website
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="portfolio-card reveal">
+
+                <div class="portfolio-image">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+                <div class="portfolio-content">
+
+                    <h3>
+                        E-commerce Website
+                    </h3>
+
+                    <p>
+                        Complete Online Store Solution
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="portfolio-card reveal">
+
+                <div class="portfolio-image">
+
+                    <i class="fa-solid fa-mobile-screen"></i>
+
+                </div>
+
+                <div class="portfolio-content">
+
+                    <h3>
+                        Mobile Application
+                    </h3>
+
+                    <p>
+                        Modern Application Development
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta reveal">
+
+    <h2>
+
+        আপনার Business-কে
+        Digital করতে প্রস্তুত?
+
+    </h2>
+
+    <p>
+
+        Let's build something amazing
+        together with TRS IT.
+
+    </p>
+
+    <a
+        href="https://wa.me/8801926391306"
+        class="btn">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        এখনই যোগাযোগ করুন
+
+    </a>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section
+    class="contact section"
+    id="contact">
+
+    <div class="container">
+
+
+        <div class="section-title reveal">
+
+            <span>
+                CONTACT US
+            </span>
+
+            <h2>
+                আমাদের সাথে যোগাযোগ করুন
+            </h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info reveal-left">
+
+                <h3>
+
+                    আপনার Project নিয়ে
+                    কথা বলুন
+
+                </h3>
+
+
+                <p>
+
+                    Website Development,
+                    App Development,
+                    Domain & Hosting,
+                    Digital Marketing অথবা
+                    অন্য যেকোনো IT Service-এর জন্য
+                    আমাদের সাথে যোগাযোগ করুন।
+
+                </p>
+
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <a href="tel:+8801926391306">
+
+                            +8801926391306
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <div>
+
+                        <strong>
+                            WhatsApp
+                        </strong>
+
+                        <a
+                            href="https://wa.me/8801926391306"
+                            target="_blank">
+
+                            +8801926391306
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+
+                        <strong>
+                            Email
+
+                        </strong>
+
+                        <a
+                            href="mailto:trsit65@gmail.com">
+
+                            trsit65@gmail.com
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <form
+                class="contact-form reveal-right"
+                id="contactForm">
+
+
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        placeholder="আপনার নাম"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <input
+                        type="tel"
+                        placeholder="মোবাইল নম্বর"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <input
+                        type="email"
+                        placeholder="Email Address">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <select>
+
+                        <option>
+                            আপনি কোন সার্ভিস চান?
+                        </option>
+
+                        <option>
+                            Website Development
+                        </option>
+
+                        <option>
+                            App Development
+                        </option>
+
+                        <option>
+                            Domain & Hosting
+                        </option>
+
+                        <option>
+                            Digital Marketing
+                        </option>
+
+                        <option>
+                            Ads Management
+                        </option>
+
+                        <option>
+                            Other Service
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <textarea
+                        placeholder="আপনার Message লিখুন"></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width:100%;">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Message Send করুন
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-about">
+
+                <div class="footer-logo">
+
+                    TRS <span>IT</span>
+
+                </div>
+
+                <p>
+
+                    TRS IT আপনার বিশ্বস্ত
+                    Digital Technology Partner।
+
+                    Website Development,
+                    App Development,
+                    Domain & Hosting এবং
+                    Digital Marketing সহ
+                    Complete IT Solution।
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#team">
+                    Team
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Services
+                </h4>
+
+                <a href="#services">
+                    Website Development
+                </a>
+
+                <a href="#services">
+                    App Development
+                </a>
+
+                <a href="#services">
+                    Domain & Hosting
+                </a>
+
+                <a href="#services">
+                    Digital Marketing
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <a href="tel:+8801926391306">
+
+                    +8801926391306
+
+                </a>
+
+                <a href="mailto:trsit65@gmail.com">
+
+                    trsit65@gmail.com
+
+                </a>
+
+                <a
+                    href="https://wa.me/8801926391306">
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="copyright">
+
+            © 2026 TRS IT.
+            All Rights Reserved.
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/8801926391306"
+    target="_blank"
+    class="whatsapp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- SCROLL TOP -->
+
+<div
+    class="scroll-top"
+    id="scrollTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</div>
+
+
+
+<script>
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+const header =
+    document.getElementById(
+        "header"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        if (window.scrollY > 50) {
+
+            header.classList.add(
+                "scrolled"
+            );
+
+        }
+
+        else {
+
+            header.classList.remove(
+                "scrolled"
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const menuBtn =
+    document.getElementById(
+        "menuBtn"
+    );
+
+
+const navLinks =
+    document.getElementById(
+        "navLinks"
+    );
+
+
+menuBtn.addEventListener(
+    "click",
+    function () {
+
+        navLinks.classList.toggle(
+            "active"
+        );
+
+    }
+);
+
+
+document
+    .querySelectorAll(
+        ".nav-links a"
+    )
+    .forEach(
+
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    navLinks.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+
+    );
+
+
+
+/* =========================================
+   SCROLL TOP
+========================================= */
+
+const scrollTop =
+    document.getElementById(
+        "scrollTop"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        if (window.scrollY > 500) {
+
+            scrollTop.classList.add(
+                "active"
+            );
+
+        }
+
+        else {
+
+            scrollTop.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+);
+
+
+scrollTop.addEventListener(
+    "click",
+    function () {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior:
+                "smooth"
+
+        });
+
+    }
+);
+
+
+
+/* =========================================
+   SCROLL REVEAL ANIMATION
+========================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right, .reveal-zoom"
+    );
+
+
+const revealObserver =
+    new IntersectionObserver(
+
+        function (entries) {
+
+            entries.forEach(
+
+                function (entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "active"
+                        );
+
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+
+            );
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+revealElements.forEach(
+
+    function (element) {
+
+        revealObserver.observe(
+            element
+        );
+
+    }
+
+);
+
+
+
+/* =========================================
+   COUNTER ANIMATION
+========================================= */
+
+const counters =
+    document.querySelectorAll(
+        ".counter"
+    );
+
+
+const counterObserver =
+    new IntersectionObserver(
+
+        function (entries) {
+
+            entries.forEach(
+
+                function (entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        const counter =
+                            entry.target;
+
+
+                        const target =
+                            Number(
+                                counter.dataset.target
+                            );
+
+
+                        const duration =
+                            2000;
+
+
+                        const startTime =
+                            performance.now();
+
+
+                        function updateCounter(
+                            currentTime
+                        ) {
+
+                            const progress =
+                                Math.min(
+                                    (
+                                        currentTime -
+                                        startTime
+                                    )
+                                    /
+                                    duration,
+                                    1
+                                );
+
+
+                            const value =
+                                Math.floor(
+                                    progress *
+                                    target
+                                );
+
+
+                            counter.innerText =
+                                value;
+
+
+                            if (
+                                progress < 1
+                            ) {
+
+                                requestAnimationFrame(
+                                    updateCounter
+                                );
+
+                            }
+
+                            else {
+
+                                counter.innerText =
+                                    target + "+";
+
+                            }
+
+                        }
+
+
+                        requestAnimationFrame(
+                            updateCounter
+                        );
+
+
+                        counterObserver.unobserve(
+                            counter
+                        );
+
+                    }
+
+                }
+
+            );
+
+        },
+
+        {
+            threshold: 0.5
+        }
+
+    );
+
+
+counters.forEach(
+
+    function (counter) {
+
+        counterObserver.observe(
+            counter
+        );
+
+    }
+
+);
+
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
+
+
+contactForm.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+
+        alert(
+            "ধন্যবাদ! আপনার Message গ্রহণ করা হয়েছে। TRS IT শীঘ্রই আপনার সাথে যোগাযোগ করবে।"
+        );
+
+
+        contactForm.reset();
+
+    }
+);
+
+
+</script>
+
+
+</body>
+</html>
